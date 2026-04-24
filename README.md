@@ -135,24 +135,7 @@ Open the `.ipynb` file and execute all cells.
 
 ## 🔧 Requirements
 
-* Python 3.x
+* Python 3.x Google Collab
 * NumPy
 * Matplotlib
 * (Optional) PyTorch / TensorFlow
-
----
-
-## 🔮 Future Work
-
-* Experiment with different λ values
-* Dynamic threshold selection
-* Compare with L2 regularization
-* Evaluate accuracy vs pruning trade-off
-
----
-
-## 👨‍💻 Author
-
-**Virat**
-
----
