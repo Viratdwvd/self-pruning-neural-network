@@ -1,4 +1,4 @@
-<img width="1486" height="730" alt="lambda_tradeoff (2)" src="https://github.com/user-attachments/assets/8b15b343-d32d-4e9c-8381-ed4ef2fb38c8" /># Case study – AI Engineer  
+# Case study – AI Engineer  
 Submitted by Virat Dwivedi 22MIA1101 vrtdwvd@gmail.com
 # Self-Pruning Neural Network
 
@@ -131,7 +131,7 @@ All layers use the custom `PrunableLinear` module with learnable gate parameters
 ## 🔹 Graph 1: Sparsity vs Accuracy Trade-off
 
 ### Interpretation:
-![Graph](lambda_tradeoff.png)
+![Graph](lambda_tradeoff(2).png)
 * As λ increases:
 
   * Sparsity increases (0% → 31.4%)
@@ -147,7 +147,7 @@ All layers use the custom `PrunableLinear` module with learnable gate parameters
 ## 🔹 Graph 2: Gate Value Distributions (Initial)
 
 ### λ = 1e-07
-![Graph](gate_distributions.png)
+![Graph](gate_distributions(2).png)
 * Most gates near **1**
 * No pruning
   👉 Model behaves like normal network
