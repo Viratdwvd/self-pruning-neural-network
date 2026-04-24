@@ -96,7 +96,31 @@ L1 regularization successfully forces most parameters to become **insignificant 
 | Threshold          | 0.01                      |
 | Sparsity           | High                      |
 | Pruning Potential  | Significant               |
+![Graph](lambda_tradeoff%20(2).png)
+Interpretation:
 
+As λ increases, sparsity rises (0% → ~31%), while accuracy drops slightly (~57–58%).
+The slope is shallow → pruning pressure is weak in this phase.
+The model begins to identify redundant weights, but most parameters remain active.
+Conclusion: L1 alone (without control) initiates pruning but doesn’t enforce strong sparsity.
+![Graph](gate_distributions%20(2).png)
+Interpretation:
+
+λ = 1e-07: Gates cluster near 1 → no pruning (all connections active).
+λ = 5e-07: Slight spread; a few values cross threshold → minimal pruning (~2–3%).
+λ = 2e-06: Emerging spike near 0 plus a cluster near 1 → partial separation, ~31% sparsity.
+Many gates still lie in the mid-range (0.1–0.8) → uncertain importance, leading to inefficient pruning.
+Conclusion: The model starts separating important vs. unimportant weights, but not decisively.
+![Graph](best_model_gate_distribution.png)
+Interpretation:
+
+A large spike at ~0 indicates a high proportion of pruned weights.
+Very few values in the mid-range; remaining gates cluster well above the threshold (0.01).
+This shows clear, binary-like behavior:
+Near 0 → remove
+Above threshold → keep
+Implies high-quality pruning: decisive gate learning, minimal ambiguity, and strong sparsity with controlled accuracy loss.
+Conclusion: With refinement (annealing + warm-up), the model achieves clean separation and effective compression.
 ---
 
 ## ✅ Conclusion
