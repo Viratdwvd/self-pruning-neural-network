@@ -131,7 +131,7 @@ All layers use the custom `PrunableLinear` module with learnable gate parameters
 ## 🔹 Graph 1: Sparsity vs Accuracy Trade-off
 
 ### Interpretation:
-![Graph](lambda_tradeoff(2).png)
+![Graph](lambda_tradeoff%20(2).png)
 * As λ increases:
 
   * Sparsity increases (0% → 31.4%)
@@ -147,7 +147,7 @@ All layers use the custom `PrunableLinear` module with learnable gate parameters
 ## 🔹 Graph 2: Gate Value Distributions (Initial)
 
 ### λ = 1e-07
-![Graph](gate_distributions(2).png)
+![Graph](gate_distributions%20(2).png)
 * Most gates near **1**
 * No pruning
   👉 Model behaves like normal network
